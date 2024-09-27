@@ -1,38 +1,202 @@
-.App {
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  margin: 0.5em 0;
+}
+
+/* Property List */
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.property-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.property-item:hover {
+  transform: scale(1.02);
+}
+
+.property-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-item h3 {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.property-item p {
+  margin: 10px;
+  color: #666;
+}
+
+.property-item button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.property-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Filters */
+.filters {
+  margin: 20px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.filters input {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filters button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #218838;
+}
+
+/* Cart Styles */
+.cart {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+}
+
+.cart div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.cart button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.cart button:hover {
+  background-color: #c82333;
+}
+
+/* Checkout Styles */
+.checkout {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.checkout input {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+}
+
+.checkout button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-list {
+      grid-template-columns: 1fr;
+  }
+
+  .filters, .cart, .checkout {
+      margin: 10px;
+  }
+
+  .property-item {
+      margin: 0 10px;
+  }
+}
+/* App.css */
+.app-header {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header nav ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.app-header nav ul li a {
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-footer {
+  background-color: #333; /* Dark background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
